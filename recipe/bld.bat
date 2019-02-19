@@ -9,9 +9,7 @@ if "%blas_impl%" == "openblas" (
     set "CVXOPT_LAPACK_LIB=openblas"
     )
 
-set CVXOPT_BUILD_GSL=1
-set "CVXOPT_GSL_LIB_DIR=%LIBRARY_LIB%"
-set "CVXOPT_GSL_INC_DIR=%LIBRARY_INC%"
+set CVXOPT_BUILD_GSL=0
 
 set CVXOPT_BUILD_FFTW=1
 set "CVXOPT_FFTW_LIB_DIR=%LIBRARY_LIB%"
