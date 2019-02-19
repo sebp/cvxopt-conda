@@ -18,8 +18,7 @@ requirements:
   host:
     - python
     - setuptools
-    - mkl-devel  {{ mkl }}  # [blas_impl == "mkl"]
-    - openblas-devel {{ openblas }}  # [blas_impl == "openblas"]
+    - blas=*=mkl
     - gsl
     - fftw
     - glpk

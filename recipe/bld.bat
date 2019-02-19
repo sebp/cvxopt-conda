@@ -1,13 +1,7 @@
 set "CVXOPT_BLAS_LIB_DIR=%LIBRARY_LIB%"
 
-if "%blas_impl%" == "mkl" (
-    set "CVXOPT_BLAS_LIB=mkl_rt"
-    set "CVXOPT_LAPACK_LIB=mkl_rt"
-    )
-if "%blas_impl%" == "openblas" (
-    set "CVXOPT_BLAS_LIB=openblas"
-    set "CVXOPT_LAPACK_LIB=openblas"
-    )
+set "CVXOPT_BLAS_LIB=mkl_rt"
+set "CVXOPT_LAPACK_LIB=mkl_rt"
 
 set CVXOPT_BUILD_GSL=1
 set "CVXOPT_GSL_LIB_DIR=%LIBRARY_LIB%"
