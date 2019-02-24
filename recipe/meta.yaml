@@ -12,8 +12,8 @@ source:
   - url: https://pypi.io/packages/source/c/cvxopt/cvxopt-{{ version }}.tar.gz
     sha256: {{ sha256 }}
   - url: http://faculty.cse.tamu.edu/davis/SuiteSparse/SuiteSparse-{{ suitesparse_version }}.tar.gz  # [win]
-    sha256: {{ suitesparse_sha256 }}
-    folder: SuiteSparse
+    sha256: {{ suitesparse_sha256 }}  # [win]
+    folder: SuiteSparse  # [win]
 
 build:
   number: 1
