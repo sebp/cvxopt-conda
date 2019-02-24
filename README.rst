@@ -15,4 +15,4 @@ Conda package for cvxopt
     :alt: CircleCI
 
 This repository contains the `conda <https://conda.io/docs/user-guide/tasks/build-packages/>`_
-recipe for `scs <https://pypi.org/project/cvxopt/>`_.
+recipe for `cvxopt <https://pypi.org/project/cvxopt/>`_.
