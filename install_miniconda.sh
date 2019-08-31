@@ -8,7 +8,7 @@ conda config --set show_channel_urls true
 conda config --set add_pip_as_python_dependency false
 
 conda update -n base -c defaults --yes --quiet conda
-conda install -n base --yes --quiet anaconda-client conda-build setuptools
+conda install -n base --yes --quiet anaconda-client conda-build
 
 conda info
 conda config --get
