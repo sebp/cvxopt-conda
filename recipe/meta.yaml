@@ -1,5 +1,5 @@
-{% set version = "1.2.0" %}
-{% set sha256 = "3296c9d49b7dcb894b20db5d7d1c1a443912b4d82358e03f836575e8398e0d60" %}
+{% set version = "1.2.3" %}
+{% set sha256 = "ea62a2a1b8e2db3a6ae44ac394f58e4620149af226c250c6f2b18739b48cfc21" %}
 
 {% set suitesparse_version = "5.3.0" %}
 {% set suitesparse_sha256 = "90e69713d8c454da5a95a839aea5d97d8d03d00cc1f667c4bdfca03f640f963d" %}
@@ -16,7 +16,7 @@ source:
     folder: SuiteSparse  # [win]
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
