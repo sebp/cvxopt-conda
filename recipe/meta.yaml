@@ -16,7 +16,7 @@ source:
     folder: SuiteSparse  # [win]
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -25,7 +25,7 @@ requirements:
   host:
     - python
     - setuptools
-    - mkl-devel  # [blas_impl == "mkl"]
+    - mkl-devel {{ mkl }}  # [blas_impl == "mkl"]
     - openblas-devel  # [blas_impl == "openblas"]
     - gsl  # [unix]
     - fftw  # [unix]
