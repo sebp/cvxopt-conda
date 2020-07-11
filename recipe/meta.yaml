@@ -1,8 +1,8 @@
-{% set version = "1.2.3" %}
-{% set sha256 = "ea62a2a1b8e2db3a6ae44ac394f58e4620149af226c250c6f2b18739b48cfc21" %}
+{% set version = "1.2.4" %}
+{% set sha256 = "fa5ced96d71e4c3e6d50735e2ac4b8cf125c388cd77b1c5937febedb5f3a2fc1" %}
 
-{% set suitesparse_version = "5.3.0" %}
-{% set suitesparse_sha256 = "90e69713d8c454da5a95a839aea5d97d8d03d00cc1f667c4bdfca03f640f963d" %}
+{% set suitesparse_version = "5.6.0" %}
+{% set suitesparse_sha256 = "76d34d9f6dafc592b69af14f58c1dc59e24853dcd7c2e8f4c98ffa223f6a1adb" %}
 
 package:
   name: cvxopt
@@ -11,12 +11,12 @@ package:
 source:
   - url: https://pypi.io/packages/source/c/cvxopt/cvxopt-{{ version }}.tar.gz
     sha256: {{ sha256 }}
-  - url: http://faculty.cse.tamu.edu/davis/SuiteSparse/SuiteSparse-{{ suitesparse_version }}.tar.gz  # [win]
+  - url: https://github.com/DrTimothyAldenDavis/SuiteSparse/archive/v{{ suitesparse_version }}.tar.gz  # [win]
     sha256: {{ suitesparse_sha256 }}  # [win]
     folder: SuiteSparse  # [win]
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
