@@ -14,9 +14,9 @@ macos_machine:
 - x86_64-apple-darwin13.4.0
 python:
 - '3.8'
-numpy:
-- '1.17'
 blas_impl:
 - mkl
 mkl:
 - 2019
+target_platform:
+- osx-64

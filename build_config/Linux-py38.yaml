@@ -1,9 +1,9 @@
 python:
-    - 3.8
-numpy:
-    - 1.17
+    - '3.8'
 blas_impl:
     - mkl
 mkl:
     - 2019
     - 2020
+target_platform:
+    - linux-64

@@ -1,8 +1,8 @@
-{% set version = "1.2.4" %}
-{% set sha256 = "fa5ced96d71e4c3e6d50735e2ac4b8cf125c388cd77b1c5937febedb5f3a2fc1" %}
+{% set version = "1.2.5" %}
+{% set sha256 = "94ec8c36bd6628a11de9014346692daeeef99b3b7bae28cef30c7490bbcb2d72" %}
 
-{% set suitesparse_version = "5.6.0" %}
-{% set suitesparse_sha256 = "76d34d9f6dafc592b69af14f58c1dc59e24853dcd7c2e8f4c98ffa223f6a1adb" %}
+{% set suitesparse_version = "5.7.2" %}
+{% set suitesparse_sha256 = "fe3bc7c3bd1efdfa5cffffb5cebf021ff024c83b5daf0ab445429d3d741bd3ad" %}
 
 package:
   name: cvxopt
@@ -11,9 +11,9 @@ package:
 source:
   - url: https://pypi.io/packages/source/c/cvxopt/cvxopt-{{ version }}.tar.gz
     sha256: {{ sha256 }}
-  - url: https://github.com/DrTimothyAldenDavis/SuiteSparse/archive/v{{ suitesparse_version }}.tar.gz  # [win]
+  - url: https://github.com/drtimothyaldendavis/suitesparse/archive/v{{ suitesparse_version }}.tar.gz  # [win]
     sha256: {{ suitesparse_sha256 }}  # [win]
-    folder: SuiteSparse  # [win]
+    folder: suitesparse  # [win]
 
 build:
   number: 0
@@ -21,7 +21,6 @@ build:
 requirements:
   build:
     - {{ compiler("c") }}
-    - c99-to-c89          # [win and vc<14]
   host:
     - python
     - setuptools
@@ -29,6 +28,7 @@ requirements:
     - openblas-devel  # [blas_impl == "openblas"]
     - gsl  # [unix]
     - fftw  # [unix]
+    - dsdp  # [unix]
     - glpk
     - suitesparse    # [unix]
 
